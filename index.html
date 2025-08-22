@@ -4,117 +4,155 @@
   <meta charset="UTF-8">
   <title>Memorial - Mang Bert</title>
   <style>
-    body {
-      margin: 0;
-      font-family: 'Georgia', serif;
-      background-color: #f0f0f0;
-      color: #333;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+body {
+  margin: 0;
+  font-family: 'Georgia', serif;
+  background-color: #f0f0f0;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-    header {
-      width: 100%;
-      padding: 30px 0;
-      text-align: center;
-      font-size: 3em;
-      color: #fff;
-      background-color: #111;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    }
+header {
+  width: 100%;
+  padding: 40px 10px;
+  text-align: center;
+  font-size: 3em;
+  color: #fff;
+  background-color: #111;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
 
-    .address {
-      font-size: 1.4em;
-      margin: 20px 0;
-      text-align: center;
-      color: #333;
-    }
+.address {
+  font-size: 1.5em;
+  margin: 20px 10px;
+  text-align: center;
+  color: #333;
+}
 
-    .main-content {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: flex-start;
-      width: 90%;
-      max-width: 1200px;
-      gap: 30px;
-      margin-bottom: 50px;
-      flex-wrap: wrap;
-    }
+.main-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  width: 95%;
+  max-width: 1200px;
+  gap: 30px;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
 
-    .carousel {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex: 2 1 600px; /* make left side bigger */
-    }
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 2 1 600px;
+}
 
-    .carousel button {
-      background-color: #fff;
-      border: 2px solid #ccc;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      font-size: 2em;
-      cursor: pointer;
-      margin: 0 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 3px 6px rgba(0,0,0,0.15);
-      transition: background-color 0.2s, transform 0.2s;
-    }
+.carousel button {
+  background-color: #fff;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  width: 60px; 
+  height: 60px;
+  font-size: 1.8em; 
+  cursor: pointer;
+  margin: 0 15px;
+  display: flex;
+  align-items: center;   
+  justify-content: center;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+  transition: background-color 0.2s, transform 0.2s;
+}
 
-    .carousel button:hover {
-      background-color: #eee;
-      transform: scale(1.1);
-    }
 
-    .carousel img, .carousel video {
-      max-width: 90%;    /* bigger width */
-      max-height: 80vh;  /* taller height */
-      border: 2px solid #ccc;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
+.carousel button:hover {
+  background-color: #eee;
+  transform: scale(1.1);
+}
 
-    video {
-      display: none;
-    }
+.carousel img, .carousel video {
+  max-width: 90%;
+  max-height: 75vh;        
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
 
-    .map-container {
-      flex: 1 1 400px;
-      min-width: 300px;
-    }
+video {
+  display: none;
+}
 
-    iframe {
-      width: 100%;
-      height: 80vh;  /* make map taller to match media */
-      border: 2px solid #ccc;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
+.map-container {
+  flex: 1 1 400px;
+  min-width: 300px;
+}
 
-    @media(max-width: 900px) {
-      .main-content {
-        flex-direction: column;
-        align-items: center;
-      }
-      .map-container, .carousel {
-        flex: 1 1 100%;
-      }
-      iframe, .carousel img, .carousel video {
-        max-width: 95%;
-        max-height: 60vh;
-      }
+iframe {
+  width: 100%;
+  height: 75vh;             
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+@media(max-width: 900px) {
+
+  /* Header */
+  header {
+    font-size: 2.2em;
+    padding: 30px 10px;
+  }
+
+  /* Location text */
+  .address {
+    font-size: 1.5em;
+    margin: 15px 10px;
+  }
+
+  .main-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  /* Carousel */
+  .carousel {
+    flex: 1 1 100%;
+  }
+
+  /* Image/video smaller for mobile */
+  .carousel img, .carousel video {
+    max-width: 90%;
+    max-height: 35vh;  
+  }
+
   .carousel button {
     width: 50px;
     height: 50px;
     font-size: 1.5em;
-    margin: 0 10px;
+    margin: 0 8px;
   }
-    }
+
+  .map-container {
+    width: 95%;
+    position: relative;
+    padding-top: 56.25%; 
+    margin: 20px 0;
+  }
+
+  .map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+
   </style>
 </head>
 <body>
@@ -125,13 +163,13 @@
   <div class="main-content">
     <!-- Left: Carousel -->
     <div class="carousel">
-      <button id="prev">&lt;</button>
+      <button id="prev">◀</button>
       <img id="mediaImage" src="memorial-img.jpg" alt="Memorial Image">
       <video id="mediaVideo" controls>
         <source src="video.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
-      <button id="next">&gt;</button>
+      <button id="next">▶</button>
     </div>
 
     <!-- Right: Google Maps -->
